@@ -1,68 +1,43 @@
-Symfony Standard Edition
-========================
+### `GET` /api/users.{_format} ###
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+_Get users list._
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+Get users list.
 
-What's inside?
---------------
+#### Requirements ####
 
-The Symfony Standard Edition is configured with the following defaults:
+**_format**
 
-  * An AppBundle you can use to start coding;
+  - Requirement: json|xml|html
 
-  * Twig as the only configured template engine;
 
-  * Doctrine ORM/DBAL;
+### `GET` /api/users/{id}.{_format} ###
 
-  * Swiftmailer;
+_Get the user._
 
-  * Annotations enabled for everything.
+Get the user.
 
-It comes pre-configured with the following bundles:
+#### Requirements ####
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+**_format**
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+  - Requirement: json|xml|html
+**id**
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+  - Type: int
+  - Description: user id
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+### `PATCH` /api/users/{id}.{_format} ###
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+_Patch the user._
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+#### Requirements ####
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
+**_format**
 
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
+  - Requirement: json|xml|html
+**id**
 
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  https://symfony.com/doc/2.8/book/installation.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/2.8/book/doctrine.html
-[8]:  https://symfony.com/doc/2.8/book/templating.html
-[9]:  https://symfony.com/doc/2.8/book/security.html
-[10]: https://symfony.com/doc/2.8/cookbook/email.html
-[11]: https://symfony.com/doc/2.8/cookbook/logging/monolog.html
-[13]: https://symfony.com/doc/2.8/bundles/SensioGeneratorBundle/index.html
+  - Type: int
+  - Description: user id
